@@ -1,1 +1,3 @@
-# example-net-base
+# example-net-log
+
+Ejemplos de log.

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
-namespace net_base_console
+namespace net_log_console
 {
     internal class Program
     {
@@ -42,6 +42,12 @@ namespace net_base_console
 
             private void Start()
             {
+                _logger.LogCritical("Custom logging critical.");
+                _logger.LogError("Custom logging error.");
+                _logger.LogWarning("Custom logging warning.");
+                _logger.LogInformation("Custom logging information.");
+                _logger.LogDebug("Custom logging debug.");
+                _logger.LogTrace("Custom logging trace.");
             }
 
             private void Stop()

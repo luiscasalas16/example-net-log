@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace net_base_webapp_netcoremvc
+namespace net_log_webapp_netcoremvc
 {
     public class Program
     {
