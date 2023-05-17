@@ -2,10 +2,12 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using net_log_library_microsoft_example;
 using System.Diagnostics;
 
-namespace net_log_console
+namespace net_log_library_microsoft_console
 {
+
     internal class Program
     {
         static void Main(string[] args)
@@ -48,6 +50,8 @@ namespace net_log_console
                 _logger.LogInformation("Custom logging information.");
                 _logger.LogDebug("Custom logging debug.");
                 _logger.LogTrace("Custom logging trace.");
+
+                new GenericComponent().Execute();
             }
 
             private void Stop()
