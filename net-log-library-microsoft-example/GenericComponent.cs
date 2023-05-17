@@ -20,10 +20,6 @@ namespace net_log_library_microsoft_example
             logger.LogInformation("GenericComponent logging information.");
             logger.LogDebug("GenericComponent logging debug.");
             logger.LogTrace("GenericComponent logging trace.");
-
-            GenericUtilities.Utility1();
-
-            GenericUtilities.Utility2();
         }
     }
 }

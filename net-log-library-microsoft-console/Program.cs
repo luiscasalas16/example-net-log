@@ -3,11 +3,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using net_log_library_microsoft_example;
+using net_log_library_microsoft_utilities;
 using System.Diagnostics;
 
 namespace net_log_library_microsoft_console
 {
-
+    /*
+    https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0
+    */
     internal class Program
     {
         static void Main(string[] args)
@@ -20,6 +23,10 @@ namespace net_log_library_microsoft_console
                         services.AddHostedService<Application>();
                     })
                     .Build();
+
+                var loggerFactory = host.Services.GetService<ILoggerFactory>();
+
+                ParameterizedFactoryLogger.Instance.Configure(loggerFactory!);
 
                 host.Run();
             }
@@ -34,12 +41,10 @@ namespace net_log_library_microsoft_console
         class Application : IHostedService
         {
             private readonly ILogger<Application> _logger;
-            private readonly IConfiguration _configuration;
 
-            public Application(ILogger<Application> logger, IConfiguration configuration)
+            public Application(ILogger<Application> logger)
             {
                 _logger = logger;
-                _configuration = configuration;
             }
 
             private void Start()
@@ -52,6 +57,8 @@ namespace net_log_library_microsoft_console
                 _logger.LogTrace("Custom logging trace.");
 
                 new GenericComponent().Execute();
+
+                new ParameterizedComponent().Execute();
             }
 
             private void Stop()
