@@ -8,13 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-log-webapp-netcoremvc", "net-log-webapp-netcoremvc\net-log-webapp-netcoremvc.csproj", "{FF0DCF30-33E0-455C-8A48-1CC9FC8EF83D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-log-library-microsoft-utilities", "net-log-library-microsoft-utilities\net-log-library-microsoft-utilities.csproj", "{F0749CA2-D1D0-4BE2-A645-225E2E989747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-log-library-microsoft-utilities", "net-log-library-microsoft-utilities\net-log-library-microsoft-utilities.csproj", "{F0749CA2-D1D0-4BE2-A645-225E2E989747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-log-library-microsoft-example", "net-log-library-microsoft-example\net-log-library-microsoft-example.csproj", "{EAC9A097-505C-4900-98C3-34571E2EDF7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-log-library-microsoft-example", "net-log-library-microsoft-example\net-log-library-microsoft-example.csproj", "{EAC9A097-505C-4900-98C3-34571E2EDF7D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-log-library-microsoft-console", "net-log-library-microsoft-console\net-log-library-microsoft-console.csproj", "{9E1A722D-54FC-4676-8445-B47A00E00902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-log-library-microsoft-console", "net-log-library-microsoft-console\net-log-library-microsoft-console.csproj", "{9E1A722D-54FC-4676-8445-B47A00E00902}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF0DCF30-33E0-455C-8A48-1CC9FC8EF83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF0DCF30-33E0-455C-8A48-1CC9FC8EF83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF0DCF30-33E0-455C-8A48-1CC9FC8EF83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF0DCF30-33E0-455C-8A48-1CC9FC8EF83D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F0749CA2-D1D0-4BE2-A645-225E2E989747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F0749CA2-D1D0-4BE2-A645-225E2E989747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0749CA2-D1D0-4BE2-A645-225E2E989747}.Release|Any CPU.ActiveCfg = Release|Any CPU
