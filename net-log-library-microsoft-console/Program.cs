@@ -4,7 +4,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using net_log_library_microsoft_example;
 using net_log_library_microsoft_utilities;
+using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace net_log_library_microsoft_console
 {
@@ -38,16 +41,18 @@ namespace net_log_library_microsoft_console
             }
         }
 
-        class Application : IHostedService
+        public class Application : BackgroundService
         {
             private readonly ILogger<Application> _logger;
+            private readonly IConfiguration _configuration;
 
-            public Application(ILogger<Application> logger)
+            public Application(ILogger<Application> logger, IConfiguration configuration)
             {
                 _logger = logger;
+                _configuration = configuration;
             }
 
-            private void Start()
+            protected override async Task ExecuteAsync(CancellationToken stoppingToken)
             {
                 _logger.LogCritical("Custom logging critical.");
                 _logger.LogError("Custom logging error.");
@@ -59,22 +64,6 @@ namespace net_log_library_microsoft_console
                 new GenericComponent().Execute();
 
                 new ParameterizedComponent().Execute();
-            }
-
-            private void Stop()
-            {
-            }
-
-            public Task StartAsync(CancellationToken cancellationToken)
-            {
-                Start();
-                return Task.CompletedTask;
-            }
-
-            public Task StopAsync(CancellationToken cancellationToken)
-            {
-                Stop();
-                return Task.CompletedTask;
             }
         }
     }
